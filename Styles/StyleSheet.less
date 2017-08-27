@@ -1,0 +1,162 @@
+﻿body {
+    padding: 0;
+    margin: 0;
+    background-image: url(../Images/background.jpg);
+    background-color: rgba(0, 0, 0, 0.95);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+    a {
+        &:hover, &:visited, &:active {
+            text-decoration: none;
+        }
+    }
+}
+
+.heroes {
+    img {
+        width: 48px;
+        height: 48px;
+        margin: 1px;
+    }
+
+    img:hover:not(.not-selectable) {
+        outline: 2px solid #0094ff;
+        outline-offset: -2px;
+    }
+
+    img:active:not(.not-selectable) {
+        outline: 2px solid #ff0000;
+        outline-offset: -2px;
+    }
+
+    .group {
+        margin: 10px 0px 10px 0px;
+        max-width: 432px;
+    }
+
+    .banned {
+        opacity: 0.3;
+    }
+
+    .banned-wrapper {
+        display: inline-block;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAAA9lBMVEXzAAD////zAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAADzAAAkmuVlAAAAUXRSTlMAAAM8q/YJf1IkTLsHqf7z3XEbVNLVBuqlEidmzE5Iz/znmZK3+S3tezmEP/F+wNvHMwx44Z+oMGlynGz38MZvYx5X9BhCk0WNYL2BUeSHFa4YhDvdAAABgUlEQVR4Xm2TZ5PbIBCGX3Sxiptsubez43rn7sT29Z7e+f9/JizDXETY5wNoh2fEsgtIcz4fdxty023eJGBpfXkr/9F9hMO7sztpU+vB5qkqXYZ1pFjMpKKYC7KR70fZIFfU0rqVynUiFYVQvBIWtFT1YUgaKiyV80iRL5dI+mPCOuXSr8DG2y5JWkFzSX9xlDeD+FYtZBJ9aipL2VHU8kgqDhSuKN08o5zkKfFBG8BGHTrkFCCkEsyBqZpyglUgclRv4EpNgWAViEAqElyrMStYBSJLzinWaowEq0BE5HTQV6MvWAXCJ+c9qsaxFdu513uxitnrAUedM6uYnCv4rs/OKubsbZzqGnKKqeHMgx9TLzjF9KIJ4KB7yinUUyoh0B7Q3SAlthWUSal5UAzpjm1dpVIi5xlEEqvPpav0SRmbqEfBy4i7840PMJxJ/u3IzEe88kmybzD+jBSdiXTZT2Fx4j74Zgv/83VvGd8uwOD9OP40Qu2XNnh+73qdxa4Oi7+Uz36HKVi8dwAAAABJRU5ErkJggg==') /*../Images/Heroes/ban.png*/;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .picked {
+        opacity: 0.1;
+    }
+}
+
+.selected-heroes {
+    height: 100%;
+    margin: auto;
+
+    ul {
+        list-style: none;
+        padding-left: 0px;
+
+        li {
+            padding: 20px 5px 20px 5px;
+
+            img {
+                width: 52px;
+                height: 52px;
+            }
+        }
+
+        li:first-child {
+            padding-top: 10px;
+        }
+    }
+
+
+    .hero-outline {
+        padding: 5px;
+    }
+
+    #hero-outline-legion-1 {
+        background-color: rgb(11,63,235);
+    }
+
+    #hero-outline-legion-2 {
+        background-color: rgb(60,244,184);
+    }
+
+    #hero-outline-legion-3 {
+        background-color: rgb(132,3,182);
+    }
+
+    #hero-outline-legion-4 {
+        background-color: rgb(246,255,22);
+    }
+
+    #hero-outline-legion-5 {
+        background-color: rgb(244,136,28);
+    }
+
+    #hero-outline-hellbourne-1 {
+        background-color: rgb(210,80,170);
+    }
+
+    #hero-outline-hellbourne-2 {
+        background-color: rgb(145,151,151);
+    }
+
+    #hero-outline-hellbourne-3 {
+        background-color: rgb(139,196,225);
+    }
+
+    #hero-outline-hellbourne-4 {
+        background-color: rgb(24,98,73);
+    }
+
+    #hero-outline-hellbourne-5 {
+        background-color: rgb(130,66,31);
+    }
+}
+
+.timers {
+    font-size: 1.5em;
+}
+
+.legion {
+    color: forestgreen;
+}
+
+.hellbourne {
+    color: darkred;
+}
+
+.red {
+    color: rgba(255, 0, 0, 0.80);
+}
+
+.green {
+    color: rgba(0, 255, 0, 0.80);
+}
+
+.chat {
+    width: 100%;
+    height: 165px;
+    resize: none;
+    padding: 3px 5px 3px 5px;
+    vertical-align: top;
+    background-color: #000015;
+    color: #dddddd;
+    border: solid;
+    border-color: #9999dd;
+    border-width: 1px;
+    overflow: auto;
+}
+
+#buttons {
+    position: absolute;
+    left: 0;
+    top: 0;
+}

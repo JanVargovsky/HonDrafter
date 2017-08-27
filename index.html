@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Hon drafter alpha version</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Styles/StyleSheet.min.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="Scripts/JavaScript.js"></script>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="container-fluid">
+            <div class="btn btn-group" role="group">
+                <button id="reset" type="button" class="btn btn-default btn-lg btn-warning" onclick="reload()">Reset</button>
+                <button id="start" type="button" class="btn btn-default btn-lg btn-success">Start</button>
+            </div>
+            <div class="row">
+                <h3 id="alert" class="text-center">&nbsp;</h3>
+            </div>
+            <div class="row">
+                <!--Legion side-->
+                <div class="col-xs-3">
+                    <div class="selected-heroes pull-right">
+                        <ul>
+                            <li>
+                                <div id="hero-outline-legion-1" class="hero-outline img-circle">
+                                    <img src="Images/Heroes/not_selected.png" alt="Not selected hero" class="img-circle" />
+                                </div>
+                            </li>
+                            <li>
+                                <div id="hero-outline-legion-2" class="hero-outline img-circle">
+                                    <img src="Images/Heroes/not_selected.png" alt="Not selected hero" class="img-circle" />
+                                </div>
+                            </li>
+                            <li>
+                                <div id="hero-outline-legion-3" class="hero-outline img-circle">
+                                    <img src="Images/Heroes/not_selected.png" alt="Not selected hero" class="img-circle" />
+                                </div>
+                            </li>
+                            <li>
+                                <div id="hero-outline-legion-4" class="hero-outline img-circle">
+                                    <img src="Images/Heroes/not_selected.png" alt="Not selected hero" class="img-circle" />
+                                </div>
+                            </li>
+                            <li>
+                                <div id="hero-outline-legion-5" class="hero-outline img-circle">
+                                    <img src="Images/Heroes/not_selected.png" alt="Not selected hero" class="img-circle" />
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--Heroes-->
+                <div class="col-xs-6">
+                    <div class="heroes">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <!--Legion heroes-->
+                                <div class="legion pull-right">
+                                    <!--Agility-->
+                                    <div class="group">
+                                        <img src="Images/Heroes/Andromeda.png" alt="Andromeda" />
+                                        <img src="Images/Heroes/Artillery.png" alt="Artillery" />
+                                        <img src="Images/Heroes/Blitz.png" alt="Blitz" />
+                                        <img src="Images/Heroes/Emerald_Warden.png" alt="Emerald Warden" />
+                                        <img src="Images/Heroes/Engineer.png" alt="Engineer" />
+                                        <img src="Images/Heroes/Draconis.png" alt="Draconis" />
+                                        <img src="Images/Heroes/Night_Hound.png" alt="Night Hound" />
+                                        <img src="Images/Heroes/Swiftblade.png" alt="Swiftblade" />
+
+                                        <img src="Images/Heroes/Magebane.png" alt="Magebane" />
+                                        <img src="Images/Heroes/Moon_Queen.png" alt="Moon Queen" />
+                                        <img src="Images/Heroes/Master_Of_Arms.png" alt="Master Of Arms" />
+                                        <img src="Images/Heroes/Moira.png" alt="Moira" />
+                                        <img src="Images/Heroes/Monkey_King.png" alt="Monkey King" />
+                                        <img src="Images/Heroes/Nomad.png" alt="Nomad" />
+                                        <img src="Images/Heroes/Scout.png" alt="Scout" />
+                                        <img src="Images/Heroes/Silhouette.png" alt="Silhouette" />
+
+                                        <img src="Images/Heroes/Sir_Benzington.png" alt="Sir Benzington" />
+                                        <img src="Images/Heroes/Tarot.png" alt="Tarot" />
+                                        <img src="Images/Heroes/Valkyrie.png" alt="Valkyrie" />
+                                        <img src="Images/Heroes/Wildsoul.png" alt="Wildsoul" />
+                                        <img src="Images/Heroes/Zephyr.png" alt="Zephyr" />
+                                        <img src="Images/Heroes/empty_legion.jpg" alt="Empty Legion hero" class="not-selectable" />
+                                        <img src="Images/Heroes/empty_legion.jpg" alt="Empty Legion hero" class="not-selectable" />
+                                        <img src="Images/Heroes/empty_legion.jpg" alt="Empty Legion hero" class="not-selectable" />
+                                    </div>
+                                    <!--Intelligence-->
+                                    <div class="group">
+                                        <img src="Images/Heroes/Aluna.png" alt="Aluna" />
+                                        <img src="Images/Heroes/Bombardier.png" alt="Bombardier" />
+                                        <img src="Images/Heroes/Bubbles.png" alt="Bubbles" />
+                                        <img src="Images/Heroes/The_Chipper.png" alt="The Chipper" />
+                                        <img src="Images/Heroes/Blacksmith.png" alt="Blacksmith" />
+                                        <img src="Images/Heroes/Ellonia.png" alt="Ellonia" />
+                                        <img src="Images/Heroes/Empath.png" alt="Empath" />
+                                        <img src="Images/Heroes/Nymphora.png" alt="Nymphora" />
+
+
+                                        <img src="Images/Heroes/Kinesis.png" alt="Kinesis" />
+                                        <img src="Images/Heroes/Thunderbringer.png" alt="Thunderbringer" />
+                                        <img src="Images/Heroes/Martyr.png" alt="Martyr" />
+                                        <img src="Images/Heroes/Monarch.png" alt="Monarch" />
+                                        <img src="Images/Heroes/Oogie.png" alt="Oogie" />
+                                        <img src="Images/Heroes/Ophelia.png" alt="Ophelia" />
+                                        <img src="Images/Heroes/Pearl.png" alt="Pearl" />
+                                        <img src="Images/Heroes/Pollywog_Priest.png" alt="Pollywog Priest" />
+
+                                        <img src="Images/Heroes/Pyromancer.png" alt="Pyromancer" />
+                                        <img src="Images/Heroes/Rhapsody.png" alt="Rhapsody" />
+                                        <img src="Images/Heroes/Tempest.png" alt="Tempest" />
+                                        <img src="Images/Heroes/Vindicator.png" alt="Vindicator" />
+                                        <img src="Images/Heroes/Witch_Slayer.png" alt="Witch Slayer" />
+                                        <img src="Images/Heroes/empty_legion.jpg" alt="Empty Legion hero" class="not-selectable" />
+                                        <img src="Images/Heroes/empty_legion.jpg" alt="Empty Legion hero" class="not-selectable" />
+                                        <img src="Images/Heroes/empty_legion.jpg" alt="Empty Legion hero" class="not-selectable" />
+                                    </div>
+                                    <!--Strength-->
+                                    <div class="group">
+                                        <img src="Images/Heroes/Armadon.png" alt="Armadon" />
+                                        <img src="Images/Heroes/Behemoth.png" alt="Behemoth" />
+                                        <img src="Images/Heroes/Berzerker.png" alt="Berzerker" />
+                                        <img src="Images/Heroes/Drunken_Master.png" alt="Drunken Master" />
+                                        <img src="Images/Heroes/Flux.png" alt="Flux" />
+                                        <img src="Images/Heroes/The_Gladiator.png" alt="The Gladiator" />
+                                        <img src="Images/Heroes/Hammerstorm.png" alt="Hammerstorm" />
+                                        <img src="Images/Heroes/Jeraziah.png" alt="Jeraziah" />
+
+                                        <img src="Images/Heroes/Legionnaire.png" alt="Legionnaire" />
+                                        <img src="Images/Heroes/Midas.png" alt="Midas" />
+                                        <img src="Images/Heroes/Pandamonium.png" alt="Pandamonium" />
+                                        <img src="Images/Heroes/Bramble.png" alt="Bramble" />
+                                        <img src="Images/Heroes/Predator.png" alt="Predator" />
+                                        <img src="Images/Heroes/Prisoner_945.png" alt="Prisoner 945" />
+                                        <img src="Images/Heroes/Rally.png" alt="Rally" />
+                                        <img src="Images/Heroes/Rampage.png" alt="Rampage" />
+
+                                        <img src="Images/Heroes/Pebbles.png" alt="Pebbles" />
+                                        <img src="Images/Heroes/Salomon.png" alt="Salomon" />
+                                        <img src="Images/Heroes/Solstice.png" alt="Solstice" />
+                                        <img src="Images/Heroes/Keeper_of_the_Forest.png" alt="Keeper of the Forest" />
+                                        <img src="Images/Heroes/Tundra.png" alt="Tundra" />
+                                        <img src="Images/Heroes/empty_legion.jpg" alt="Empty Legion hero" class="not-selectable" />
+                                        <img src="Images/Heroes/empty_legion.jpg" alt="Empty Legion hero" class="not-selectable" />
+                                        <img src="Images/Heroes/empty_legion.jpg" alt="Empty Legion hero" class="not-selectable" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <!--Hellbourne heroes-->
+                                <div class="hellbourne">
+                                    <!--Agility-->
+                                    <div class="group">
+                                        <img src="Images/Heroes/Arachna.png" alt="Arachna" />
+                                        <img src="Images/Heroes/Bushwack.png" alt="Bushwack" />
+                                        <img src="Images/Heroes/Calamity.png" alt="Calamity" />
+                                        <img src="Images/Heroes/Chronos.png" alt="Chronos" />
+                                        <img src="Images/Heroes/Corrupted_Disciple.png" alt="Corrupted Disciple" />
+                                        <img src="Images/Heroes/Dampeer.png" alt="Dampeer" />
+                                        <img src="Images/Heroes/Slither.png" alt="Slither" />
+                                        <img src="Images/Heroes/Fayde.png" alt="Fayde" />
+
+                                        <img src="Images/Heroes/Flint_Beastwood.png" alt="Flint Beastwood" />
+                                        <img src="Images/Heroes/Forsaken_Archer.png" alt="Forsaken Archer" />
+                                        <img src="Images/Heroes/Gemini.png" alt="Gemini" />
+                                        <img src="Images/Heroes/Grinex.png" alt="Grinex" />
+                                        <img src="Images/Heroes/Gunblade.png" alt="Gunblade" />
+                                        <img src="Images/Heroes/Blood_Hunter.png" alt="Blood Hunter" />
+                                        <img src="Images/Heroes/Klanx.png" alt="Klanx" />
+                                        <img src="Images/Heroes/Sand_Wraith.png" alt="Sand Wraith" />
+
+
+                                        <img src="Images/Heroes/The_Madman.png" alt="The Madman" />
+                                        <img src="Images/Heroes/Shadowblade.png" alt="Shadowblade" />
+                                        <img src="Images/Heroes/Soulstealer.png" alt="Soulstealer" />
+                                        <img src="Images/Heroes/Tremble.png" alt="Tremble" />
+                                        <img src="Images/Heroes/The_Dark_Lady.png" alt="The Dark Lady" />
+                                        <img src="Images/Heroes/empty_hellbourne.jpg" alt="Empty Hellbourne hero" class="not-selectable" />
+                                        <img src="Images/Heroes/empty_hellbourne.jpg" alt="Empty Hellbourne hero" class="not-selectable" />
+                                        <img src="Images/Heroes/empty_hellbourne.jpg" alt="Empty Hellbourne hero" class="not-selectable" />
+                                    </div>
+                                    <!--Intelligence-->
+                                    <div class="group">
+                                        <img src="Images/Heroes/Artesia.png" alt="Artesia" />
+                                        <img src="Images/Heroes/Wretched_Hag.png" alt="Wretched Hag" />
+                                        <img src="Images/Heroes/Circe.png" alt="Circe" />
+                                        <img src="Images/Heroes/Defiler.png" alt="Defiler" />
+                                        <img src="Images/Heroes/Plague_Rider.png" alt="Plague Rider" />
+                                        <img src="Images/Heroes/Doctor_Repulsor.png" alt="Doctor Repulsor" />
+                                        <img src="Images/Heroes/Glacius.png" alt="Glacius" />
+                                        <img src="Images/Heroes/Geomancer.png" alt="Geomancer" />
+
+
+                                        <img src="Images/Heroes/Hellbringer.png" alt="Hellbringer" />
+                                        <img src="Images/Heroes/Soul_Reaper.png" alt="Soul Reaper" />
+                                        <img src="Images/Heroes/Myrmidon.png" alt="Myrmidon" />
+                                        <img src="Images/Heroes/Parallax.png" alt="Parallax" />
+                                        <img src="Images/Heroes/Parasite.png" alt="Parasite" />
+                                        <img src="Images/Heroes/Prophet.png" alt="Prophet" />
+                                        <img src="Images/Heroes/Puppet_Master.png" alt="Puppet Master" />
+                                        <img src="Images/Heroes/Revenant.png" alt="Revenant" />
+
+                                        <img src="Images/Heroes/Riftwalker.png" alt="Riftwalker" />
+                                        <img src="Images/Heroes/Demented_Shaman.png" alt="Demented Shaman" />
+                                        <img src="Images/Heroes/Succubus.png" alt="Succubus" />
+                                        <img src="Images/Heroes/Gravekeeper.png" alt="Gravekeeper" />
+                                        <img src="Images/Heroes/Voodoo_Jester.png" alt="Voodoo Jester" />
+                                        <img src="Images/Heroes/Torturer.png" alt="Torturer" />
+                                        <img src="Images/Heroes/empty_hellbourne.jpg" alt="Empty Hellbourne hero" class="not-selectable" />
+                                        <img src="Images/Heroes/empty_hellbourne.jpg" alt="Empty Hellbourne hero" class="not-selectable" />
+                                    </div>
+                                    <!--Strength-->
+                                    <div class="group">
+                                        <img src="Images/Heroes/Accursed.png" alt="Accursed" />
+                                        <img src="Images/Heroes/Balphagore.png" alt="Balphagore" />
+                                        <img src="Images/Heroes/Cthulhuphant.png" alt="Cthulhuphant" />
+                                        <img src="Images/Heroes/Deadlift.png" alt="Deadlift" />
+                                        <img src="Images/Heroes/Deadwood.png" alt="Deadwood" />
+                                        <img src="Images/Heroes/Devourer.png" alt="Devourer" />
+                                        <img src="Images/Heroes/Lord_Salforis.png" alt="Lord Salforis" />
+                                        <img src="Images/Heroes/Electrician.png" alt="Electrician" />
+
+                                        <img src="Images/Heroes/Gauntlet.png" alt="Gauntlet" />
+                                        <img src="Images/Heroes/Kane.png" alt="Kane" />
+                                        <img src="Images/Heroes/Kraken.png" alt="Kraken" />
+                                        <img src="Images/Heroes/Lodestone.png" alt="Lodestone" />
+                                        <img src="Images/Heroes/Magmus.png" alt="Magmus" />
+                                        <img src="Images/Heroes/Maliken.png" alt="Maliken" />
+                                        <img src="Images/Heroes/Moraxus.png" alt="Moraxus" />
+                                        <img src="Images/Heroes/Pharaoh.png" alt="Pharaoh" />
+
+                                        <img src="Images/Heroes/Pestilence.png" alt="Pestilence" />
+                                        <img src="Images/Heroes/Amun-Ra.png" alt="Amun-Ra" />
+                                        <img src="Images/Heroes/Ravenor.png" alt="Ravenor" />
+                                        <img src="Images/Heroes/Riptide.png" alt="Riptide" />
+                                        <img src="Images/Heroes/War_Beast.png" alt="War_Beast" />
+                                        <img src="Images/Heroes/empty_hellbourne.jpg" alt="Empty Hellbourne hero" class="not-selectable" />
+                                        <img src="Images/Heroes/empty_hellbourne.jpg" alt="Empty Hellbourne hero" class="not-selectable" />
+                                        <img src="Images/Heroes/empty_hellbourne.jpg" alt="Empty Hellbourne hero" class="not-selectable" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Hellbourne side-->
+                <div class="col-xs-3">
+                    <div class="selected-heroes pull-left">
+                        <ul>
+                            <li>
+                                <div id="hero-outline-hellbourne-1" class="hero-outline img-circle">
+                                    <img src="Images/Heroes/not_selected.png" alt="Not selected hero" class="img-circle" />
+                                </div>
+                            </li>
+                            <li>
+                                <div id="hero-outline-hellbourne-2" class="hero-outline img-circle">
+                                    <img src="Images/Heroes/not_selected.png" alt="Not selected hero" class="img-circle" />
+                                </div>
+                            </li>
+                            <li>
+                                <div id="hero-outline-hellbourne-3" class="hero-outline img-circle">
+                                    <img src="Images/Heroes/not_selected.png" alt="Not selected hero" class="img-circle" />
+                                </div>
+                            </li>
+                            <li>
+                                <div id="hero-outline-hellbourne-4" class="hero-outline img-circle">
+                                    <img src="Images/Heroes/not_selected.png" alt="Not selected hero" class="img-circle" />
+                                </div>
+                            </li>
+                            <li>
+                                <div id="hero-outline-hellbourne-5" class="hero-outline img-circle">
+                                    <img src="Images/Heroes/not_selected.png" alt="Not selected hero" class="img-circle" />
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <p class="text-center timers">
+                    <span id="currentTime">&nbsp;</span><br />
+                    <span id="legionTime" class="legion">&nbsp;</span>
+                    <span id="hellbourneTime" class="hellbourne">&nbsp;</span>
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 col-xs-offset-4">
+                    <div id="chat" class="chat" contenteditable="true"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p class="text-center">
+                &copy; 2015-2017 - Jan Vargovský
+                <a href="https://www.facebook.com/JanVargovsky" class="fa fa-facebook-official"></a>
+                <a href="https://www.linkedin.com/pub/jan-vargovsky/7a/556/3a9" class="fa fa-linkedin-square"></a>
+                <a href="https://twitter.com/janvargovsky" class="fa fa-twitter-square"></a>
+                <br /> <a href="http://www.heroesofnewerth.com/"> Heroes of Newerth</a> (HoN) is a registered trademark of the Frostburn Studios.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
