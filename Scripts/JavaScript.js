@@ -12,7 +12,7 @@ function PhaseType(type, time) {
 
 var PHASE_TYPE = {
     BAN: { time: 25 },
-    PICK: { time: 30 }
+    PICK: { time: 35 }
 };
 
 function Phase(type, team) {
@@ -20,7 +20,7 @@ function Phase(type, team) {
     this.team = team;
 }
 
-function CaptainsPick(legion, hellbourne, phases) {
+function CaptainsPick(legion, hellbourne) {
     var instance = this;
     this.legion = legion;
     this.hellbourne = hellbourne;
@@ -32,20 +32,22 @@ function CaptainsPick(legion, hellbourne, phases) {
         new Phase(PHASE_TYPE.BAN, hellbourne),
         new Phase(PHASE_TYPE.BAN, legion),
         new Phase(PHASE_TYPE.BAN, hellbourne),
-        new Phase(PHASE_TYPE.PICK, legion),
-        new Phase(PHASE_TYPE.PICK, hellbourne),
-        new Phase(PHASE_TYPE.PICK, legion),
-        new Phase(PHASE_TYPE.PICK, hellbourne),
-        new Phase(PHASE_TYPE.PICK, legion),
-        new Phase(PHASE_TYPE.PICK, hellbourne),
         new Phase(PHASE_TYPE.BAN, legion),
+        new Phase(PHASE_TYPE.BAN, hellbourne),
+        new Phase(PHASE_TYPE.PICK, legion),
+        new Phase(PHASE_TYPE.PICK, hellbourne),
+        new Phase(PHASE_TYPE.PICK, hellbourne),
+        new Phase(PHASE_TYPE.PICK, legion),
+        new Phase(PHASE_TYPE.PICK, legion),
         new Phase(PHASE_TYPE.BAN, hellbourne),
         new Phase(PHASE_TYPE.BAN, legion),
         new Phase(PHASE_TYPE.BAN, hellbourne),
         new Phase(PHASE_TYPE.BAN, legion),
         new Phase(PHASE_TYPE.BAN, hellbourne),
-        new Phase(PHASE_TYPE.PICK, legion),
+        new Phase(PHASE_TYPE.BAN, legion),
         new Phase(PHASE_TYPE.PICK, hellbourne),
+        new Phase(PHASE_TYPE.PICK, hellbourne),
+        new Phase(PHASE_TYPE.PICK, legion),
         new Phase(PHASE_TYPE.PICK, legion),
         new Phase(PHASE_TYPE.PICK, hellbourne),
     ];
