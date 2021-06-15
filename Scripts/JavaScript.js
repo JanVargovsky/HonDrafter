@@ -27,29 +27,34 @@ function CaptainsPick(legion, hellbourne) {
     this.currentTime = 0;
     this.phaseIndex = -1;
 
+    let first = legion;
+    let second = hellbourne;
+    if (Math.random() < 0.5)
+        [second, first] = [first, second];
+
     this.phases = [
-        new Phase(PHASE_TYPE.BAN, legion),
-        new Phase(PHASE_TYPE.BAN, hellbourne),
-        new Phase(PHASE_TYPE.BAN, legion),
-        new Phase(PHASE_TYPE.BAN, hellbourne),
-        new Phase(PHASE_TYPE.BAN, legion),
-        new Phase(PHASE_TYPE.BAN, hellbourne),
-        new Phase(PHASE_TYPE.PICK, legion),
-        new Phase(PHASE_TYPE.PICK, hellbourne),
-        new Phase(PHASE_TYPE.PICK, hellbourne),
-        new Phase(PHASE_TYPE.PICK, legion),
-        new Phase(PHASE_TYPE.PICK, legion),
-        new Phase(PHASE_TYPE.BAN, hellbourne),
-        new Phase(PHASE_TYPE.BAN, legion),
-        new Phase(PHASE_TYPE.BAN, hellbourne),
-        new Phase(PHASE_TYPE.BAN, legion),
-        new Phase(PHASE_TYPE.BAN, hellbourne),
-        new Phase(PHASE_TYPE.BAN, legion),
-        new Phase(PHASE_TYPE.PICK, hellbourne),
-        new Phase(PHASE_TYPE.PICK, hellbourne),
-        new Phase(PHASE_TYPE.PICK, legion),
-        new Phase(PHASE_TYPE.PICK, legion),
-        new Phase(PHASE_TYPE.PICK, hellbourne),
+        new Phase(PHASE_TYPE.BAN, first),
+        new Phase(PHASE_TYPE.BAN, second),
+        new Phase(PHASE_TYPE.BAN, first),
+        new Phase(PHASE_TYPE.BAN, second),
+        new Phase(PHASE_TYPE.BAN, first),
+        new Phase(PHASE_TYPE.BAN, second),
+        new Phase(PHASE_TYPE.PICK, first),
+        new Phase(PHASE_TYPE.PICK, second),
+        new Phase(PHASE_TYPE.PICK, second),
+        new Phase(PHASE_TYPE.PICK, first),
+        new Phase(PHASE_TYPE.PICK, first),
+        new Phase(PHASE_TYPE.BAN, second),
+        new Phase(PHASE_TYPE.BAN, first),
+        new Phase(PHASE_TYPE.BAN, second),
+        new Phase(PHASE_TYPE.BAN, first),
+        new Phase(PHASE_TYPE.BAN, second),
+        new Phase(PHASE_TYPE.BAN, first),
+        new Phase(PHASE_TYPE.PICK, second),
+        new Phase(PHASE_TYPE.PICK, second),
+        new Phase(PHASE_TYPE.PICK, first),
+        new Phase(PHASE_TYPE.PICK, first),
+        new Phase(PHASE_TYPE.PICK, second),
     ];
 
     this.nextPhase = function () {

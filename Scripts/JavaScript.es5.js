@@ -29,7 +29,15 @@ function CaptainsPick(legion, hellbourne) {
     this.currentTime = 0;
     this.phaseIndex = -1;
 
-    this.phases = [new Phase(PHASE_TYPE.BAN, legion), new Phase(PHASE_TYPE.BAN, hellbourne), new Phase(PHASE_TYPE.BAN, legion), new Phase(PHASE_TYPE.BAN, hellbourne), new Phase(PHASE_TYPE.BAN, legion), new Phase(PHASE_TYPE.BAN, hellbourne), new Phase(PHASE_TYPE.PICK, legion), new Phase(PHASE_TYPE.PICK, hellbourne), new Phase(PHASE_TYPE.PICK, hellbourne), new Phase(PHASE_TYPE.PICK, legion), new Phase(PHASE_TYPE.PICK, legion), new Phase(PHASE_TYPE.BAN, hellbourne), new Phase(PHASE_TYPE.BAN, legion), new Phase(PHASE_TYPE.BAN, hellbourne), new Phase(PHASE_TYPE.BAN, legion), new Phase(PHASE_TYPE.BAN, hellbourne), new Phase(PHASE_TYPE.BAN, legion), new Phase(PHASE_TYPE.PICK, hellbourne), new Phase(PHASE_TYPE.PICK, hellbourne), new Phase(PHASE_TYPE.PICK, legion), new Phase(PHASE_TYPE.PICK, legion), new Phase(PHASE_TYPE.PICK, hellbourne)];
+    var first = legion;
+    var second = hellbourne;
+    if (Math.random() < 0.5) {
+        ;
+
+        var _ref = [first, second];
+        second = _ref[0];
+        first = _ref[1];
+    }this.phases = [new Phase(PHASE_TYPE.BAN, first), new Phase(PHASE_TYPE.BAN, second), new Phase(PHASE_TYPE.BAN, first), new Phase(PHASE_TYPE.BAN, second), new Phase(PHASE_TYPE.BAN, first), new Phase(PHASE_TYPE.BAN, second), new Phase(PHASE_TYPE.PICK, first), new Phase(PHASE_TYPE.PICK, second), new Phase(PHASE_TYPE.PICK, second), new Phase(PHASE_TYPE.PICK, first), new Phase(PHASE_TYPE.PICK, first), new Phase(PHASE_TYPE.BAN, second), new Phase(PHASE_TYPE.BAN, first), new Phase(PHASE_TYPE.BAN, second), new Phase(PHASE_TYPE.BAN, first), new Phase(PHASE_TYPE.BAN, second), new Phase(PHASE_TYPE.BAN, first), new Phase(PHASE_TYPE.PICK, second), new Phase(PHASE_TYPE.PICK, second), new Phase(PHASE_TYPE.PICK, first), new Phase(PHASE_TYPE.PICK, first), new Phase(PHASE_TYPE.PICK, second)];
 
     this.nextPhase = function () {
         instance.phaseIndex++;
