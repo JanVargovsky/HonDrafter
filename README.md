@@ -1,4 +1,7 @@
 # HonDrafter
 Practice drafting in the Heroes of Newerth.
 
-Online version: http://hondraft.net
+Online versions:
+- https://janvargovsky.github.io/HonDrafter/
+- https://hondrafter.azurewebsites.net/
+- http://hondraft.net
