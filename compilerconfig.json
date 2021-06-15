@@ -2,5 +2,9 @@
   {
     "outputFile": "Scripts/JavaScript.es5.js",
     "inputFile": "Scripts/JavaScript.js"
+  },
+  {
+    "outputFile": "Styles/StyleSheet.css",
+    "inputFile": "Styles/StyleSheet.less"
   }
 ]
